@@ -1,0 +1,21 @@
+<app-modal [modalId]="modalId">
+  <ng-container title> Log In </ng-container>
+  <form>
+    <div class="mb-3">
+      <label for="recipient-name" class="col-form-label">Username</label>
+      <input type="text" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label for="message-text" class="col-form-label">Password:</label>
+      <input class="form-control" id="message-text" />
+    </div>
+  </form>
+  <ng-container footer>
+    <button type="button" class="btn btn-secondary" (click)="closeModal()">
+      Close
+    </button>
+    <button type="button" class="btn btn-primary" (click)="onLogin()">
+      Log In
+    </button>
+  </ng-container>
+</app-modal>
