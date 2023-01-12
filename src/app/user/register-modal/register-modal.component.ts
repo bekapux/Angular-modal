@@ -21,4 +21,9 @@ export class RegisterModalComponent implements OnInit {
   closeModal() {
     this.modalService.toggleModal(this.modalId);
   }
+
+  onLoginClick(){
+    this.modalService.toggleModal(this.modalId);
+    this.modalService.toggleModal("auth");
+  }
 }

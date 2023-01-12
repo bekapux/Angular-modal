@@ -28,4 +28,9 @@ export class AuthModalComponent implements OnInit {
   ngOnDestroy() {
     this.modalService.unregister(this.modalId);
   }
+
+  onRegisterClick(){
+    this.modalService.toggleModal(this.modalId);
+    this.modalService.toggleModal("register");
+  }
 }
