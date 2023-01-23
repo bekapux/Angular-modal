@@ -1,0 +1,14 @@
+<app-modal [modalId]="modalId">
+  <ng-container title> Request Sources </ng-container>
+  <app-generic-table
+    [data]="requestSources"
+    [isLoading]="isLoading"
+    (addNewEvent)="onSourceAdded($event)"
+    (onDeleteEvent)="onDelete($event)"
+  ></app-generic-table>
+  <ng-container footer>
+    <button type="button" class="btn btn-primary" (click)="closeModal()">
+      OK
+    </button>
+  </ng-container>
+</app-modal>

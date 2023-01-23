@@ -8,6 +8,7 @@ import { ModalService } from 'src/app/_services/modal.service';
 })
 export class ModalComponent implements OnInit, OnDestroy {
   @Input() modalId: string = '';
+  @Input() size: string = 'xl'
   constructor(public modalService: ModalService, private el: ElementRef) {}
 
   ngOnInit(): void {

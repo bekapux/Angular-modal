@@ -1,2 +1,42 @@
 <app-header></app-header>
 
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between">
+      <span>Request Sources</span>
+      <button class="btn btn-primary" (click)="openRequestSourcesModal()">
+        Add / Edit
+      </button>
+    </li>
+    <li class="list-group-item d-flex justify-content-between">
+      <span>Reasons for Visit</span>
+      <button class="btn btn-primary" (click)="openReasonsForVisitModal()">
+        Add / Edit
+      </button>
+    </li>
+    <li class="list-group-item d-flex justify-content-between">
+      <span>Cancel / Reschedule Reasons</span>
+      <button class="btn btn-primary" (click)="openCancelRescheduleModal()">
+        Add / Edit
+      </button>
+    </li>
+    <li class="list-group-item d-flex justify-content-between">
+      <span>Upload Document Labels</span>
+      <button class="btn btn-primary" (click)="openUploadDocumentLabelsModal()">
+        Add / Edit
+      </button>
+    </li>
+    <li class="list-group-item d-flex justify-content-between">
+      <span>Host Domains</span>
+      <button class="btn btn-primary" (click)="openHostDomainsModal()">
+        Add / Edit
+      </button>
+    </li>
+  </ul>
+</div>
+
+<app-request-sources *ngIf="modalService.isModalOpen('request-sources')"></app-request-sources>
+<app-reasons-for-visit *ngIf="modalService.isModalOpen('reasons-for-visit')"></app-reasons-for-visit>
+<app-cancel-reschedule-reasons *ngIf="modalService.isModalOpen('cancel-reschedule-reasons')"></app-cancel-reschedule-reasons>
+<app-upload-document-labels *ngIf="modalService.isModalOpen('upload-document-labels')"></app-upload-document-labels>
+<app-host-domains *ngIf="modalService.isModalOpen('host-domains')"></app-host-domains>

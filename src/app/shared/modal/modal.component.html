@@ -1,5 +1,5 @@
 <div
-  class="modal"
+  class="modal modal-{{size}}"
   (closeModalEvent)="closeModal()"
   [hidden]="!modalService.isModalOpen(modalId)"
 >
@@ -7,9 +7,9 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5">
+        <h6 class="modal-title">
           <ng-content select="[title]"></ng-content>
-        </h1>
+        </h6>
         <button type="button" class="btn-close" (click)="closeModal()"></button>
       </div>
       <div class="modal-body">

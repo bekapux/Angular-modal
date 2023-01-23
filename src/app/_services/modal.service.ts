@@ -17,6 +17,10 @@ export class ModalService {
   }
 
   register(id: string) {
+    let item = this.modals.find((x) => x.id == id);
+    if (item) {
+      return;
+    }
     this.modals.push({ id, visible: false });
   }
 

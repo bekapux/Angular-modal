@@ -6,3 +6,15 @@
   height: 100%;
   transition: 1000ms;
 }
+.modal{
+  .modal-header{
+    background-color: #294753;
+    color: white;
+    font-weight: 100;
+    font-family: 'LatoLatinWeb', Arial, Helvetica, sans-serif;
+    padding: 5px 10px 5px 20px
+  }
+  .btn-close{
+    fill: white !important;
+  }
+}
